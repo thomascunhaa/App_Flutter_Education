@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_modular/flutter_modular.dart';
 
 mixin HomePageMixin {
   Widget customAppBar() {
@@ -56,31 +57,30 @@ mixin HomePageMixin {
   }
 
   Widget bottomNaigatorCustom() {
-    List<BottomNavigationBarItem> items = [
-      const BottomNavigationBarItem(
-        icon: Icon(Icons.home, color: Colors.black),
-        label: 'Home',
-      ),
-      const BottomNavigationBarItem(
-        icon: Icon(Icons.messenger_outlined, color: Colors.black),
-        label: 'Search',
-      ),
-      const BottomNavigationBarItem(
-        icon: Icon(Icons.circle_notifications_sharp, color: Colors.black),
-        label: 'Settings',
-      ),
-      const BottomNavigationBarItem(
-        icon: Icon(Icons.person, color: Colors.black),
-        label: 'Settings',
-      ),
-    ];
-
     return Container(
       width: 200,
       height: 80,
-      decoration: BoxDecoration(borderRadius: BorderRadius.circular(30), color: Colors.white),
-      child: BottomNavigationBar(
-        items: items,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(50),
+        color: Colors.white,
+      ),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        children: [
+          InkWell(
+            onTap: () => Modular.to.navigate('/my-guardian'),
+            child: Row(
+              children: const [
+                ImageIcon(AssetImage('assets/icons/home.png'), color: Colors.black),
+                // SizedBox(width: 12),
+                // Text('Home', style: TextStyle(fontSize: 18)),
+              ],
+            ),
+          ),
+          const InkWell(child: ImageIcon(AssetImage('assets/icons/speech-bubble.png'), color: Colors.black)),
+          const InkWell(child: ImageIcon(AssetImage('assets/icons/bell.png'), color: Colors.black)),
+          const InkWell(child: ImageIcon(AssetImage('assets/icons/user.png'), color: Colors.black)),
+        ],
       ),
     );
   }
