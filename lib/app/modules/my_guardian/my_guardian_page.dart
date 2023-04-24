@@ -21,6 +21,8 @@ class _MyGuardianState extends State<MyGuardian> {
               children: [
                 InkWell(
                   onTap: () => Modular.to.navigate('/onboarding-fee'),
+                  highlightColor: Colors.transparent,
+                  splashColor: Colors.transparent,
                   child: const Icon(
                     Icons.arrow_back,
                     color: Colors.black,
@@ -74,6 +76,9 @@ class _MyGuardianState extends State<MyGuardian> {
             ),
           ),
           InkWell(
+            onTap: () => Modular.to.navigate('/onboarding-fee'),
+            highlightColor: Colors.transparent,
+            splashColor: Colors.transparent,
             child: Padding(
               padding: const EdgeInsets.only(top: 410, left: 50),
               child: Container(

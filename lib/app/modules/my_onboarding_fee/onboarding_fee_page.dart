@@ -42,7 +42,7 @@ class _OnboardingFeeState extends State<OnboardingFee> {
           ),
           Positioned(
             top: 80, // Posiciona a elipse acima da tela
-            left: 290,
+            left: 330,
             child: Container(
               width: 25,
               height: 300,
@@ -53,12 +53,30 @@ class _OnboardingFeeState extends State<OnboardingFee> {
                   ),
             ),
           ),
+          InkWell(
+            onTap: () => Modular.to.navigate('/my-guardian'),
+            highlightColor: Colors.transparent,
+            splashColor: Colors.transparent,
+            child: Padding(
+              padding: const EdgeInsets.only(top: 60, right: 25),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: const [
+                  Text(
+                    'Skip',
+                    style: TextStyle(color: Colors.grey, fontWeight: FontWeight.bold),
+                  )
+                ],
+              ),
+            ),
+          ),
           Padding(
             padding: const EdgeInsets.only(left: 40, top: 80),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Text('Fees', style: TextStyle(fontSize: 50, fontWeight: FontWeight.bold)),
+                const Text('Fees', style: TextStyle(fontSize: 35, fontWeight: FontWeight.bold)),
+                const SizedBox(height: 10),
                 Text('Lorem ipsum dolor sit amet,\nconsectetur adipiscing elit, sed do\neiusmod tempor incididunt dolore\nmagna aliqua', style: TextStyle(fontSize: 18, fontWeight: FontWeight.normal, color: Colors.grey.shade600)),
               ],
             ),
@@ -74,10 +92,12 @@ class _OnboardingFeeState extends State<OnboardingFee> {
           ),
           InkWell(
             onTap: () => Modular.to.navigate('/my-guardian'),
+            highlightColor: Colors.transparent,
+            splashColor: Colors.transparent,
             child: Align(
               alignment: Alignment.bottomCenter,
               child: Padding(
-                padding: const EdgeInsets.all(8.0),
+                padding: const EdgeInsets.only(bottom: 30),
                 child: Container(
                     width: 300,
                     height: 50,

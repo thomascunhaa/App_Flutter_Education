@@ -16,7 +16,7 @@ class _OnboardingWelcomeState extends State<OnboardingWelcome> {
         children: [
           Positioned(
             top: 30, // Posiciona a elipse acima da tela
-            right: -120,
+            right: -130,
             child: Container(
               width: 200,
               height: 300,
@@ -28,8 +28,8 @@ class _OnboardingWelcomeState extends State<OnboardingWelcome> {
             ),
           ),
           Positioned(
-            top: 200, // Posiciona a elipse acima da tela
-            left: 50,
+            top: 190, // Posiciona a elipse acima da tela
+            left: 65,
             child: Container(
               width: 180,
               height: 300,
@@ -41,7 +41,7 @@ class _OnboardingWelcomeState extends State<OnboardingWelcome> {
             ),
           ),
           Positioned(
-            top: 100, // Posiciona a elipse acima da tela
+            top: 70, // Posiciona a elipse acima da tela
             left: 70,
             child: Container(
               width: 25,
@@ -54,8 +54,8 @@ class _OnboardingWelcomeState extends State<OnboardingWelcome> {
             ),
           ),
           Positioned(
-            top: 320, // Posiciona a elipse acima da tela
-            left: 305,
+            top: 270, // Posiciona a elipse acima da tela
+            left: 330,
             child: Container(
               width: 25,
               height: 300,
@@ -87,6 +87,9 @@ class _OnboardingWelcomeState extends State<OnboardingWelcome> {
                 height: 400,
                 fit: BoxFit.cover,
               ),
+              const SizedBox(
+                height: 20,
+              ),
               const Text(
                 'Welcome To \n    Learner',
                 style: TextStyle(
@@ -102,10 +105,12 @@ class _OnboardingWelcomeState extends State<OnboardingWelcome> {
                 ),
               ),
               const SizedBox(
-                height: 20,
+                height: 30,
               ),
               InkWell(
                 onTap: () => Modular.to.navigate('/onboarding-fee'),
+                highlightColor: Colors.transparent,
+                splashColor: Colors.transparent,
                 child: Align(
                   alignment: Alignment.bottomCenter,
                   child: Padding(
