@@ -28,7 +28,7 @@ class _OnboardingWelcomeState extends State<OnboardingWelcome> {
             ),
           ),
           Positioned(
-            top: 240, // Posiciona a elipse acima da tela
+            top: 200, // Posiciona a elipse acima da tela
             left: 50,
             child: Container(
               width: 180,
@@ -102,39 +102,43 @@ class _OnboardingWelcomeState extends State<OnboardingWelcome> {
                 ),
               ),
               const SizedBox(
-                height: 50,
+                height: 20,
               ),
-              Padding(
-                padding: const EdgeInsets.only(left: 20, right: 20),
-                child: Container(
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        color: const Color(0xFF4E74F9)),
-                    child: Row(
-                      children: [
-                        Flexible(
-                          child: Center(
-                            child: TextButton(
-                              onPressed: () =>
-                                  Modular.to.navigate('/onboarding-fee'),
-                              child: const Text(
-                                'Get Started',
-                                style: TextStyle(
-                                    color: Colors.white, fontSize: 18),
+              InkWell(
+                onTap: () => Modular.to.navigate('/onboarding-fee'),
+                child: Align(
+                  alignment: Alignment.bottomCenter,
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          color: const Color(0xFF4E74F9),
+                        ),
+                        width: 300,
+                        height: 50,
+                        child: Row(
+                          children: const [
+                            Flexible(
+                              child: Center(
+                                child: Text(
+                                  'Get Started',
+                                  style: TextStyle(color: Colors.white, fontSize: 18),
+                                ),
                               ),
                             ),
-                          ),
-                        ),
-                        const Padding(
-                          padding: EdgeInsets.only(right: 20),
-                          child: Icon(
-                            Icons.arrow_forward_ios_outlined,
-                            color: Colors.white,
-                            size: 12,
-                          ),
-                        )
-                      ],
-                    )),
+                            Padding(
+                              padding: EdgeInsets.only(right: 20),
+                              child: Icon(
+                                Icons.arrow_forward_ios_outlined,
+                                color: Colors.white,
+                                size: 12,
+                              ),
+                            )
+                          ],
+                        )),
+                  ),
+                ),
               ),
             ],
           ),

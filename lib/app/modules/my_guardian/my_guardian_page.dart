@@ -19,9 +19,12 @@ class _MyGuardianState extends State<MyGuardian> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Icon(
-                  Icons.arrow_back,
-                  color: Colors.black,
+                InkWell(
+                  onTap: () => Modular.to.navigate('/onboarding-fee'),
+                  child: const Icon(
+                    Icons.arrow_back,
+                    color: Colors.black,
+                  ),
                 ),
                 const SizedBox(height: 25),
                 const Text(
@@ -31,10 +34,7 @@ class _MyGuardianState extends State<MyGuardian> {
                 const SizedBox(height: 30),
                 const Text(
                   'Give acces to another guardian',
-                  style: TextStyle(
-                      fontSize: 17,
-                      fontWeight: FontWeight.normal,
-                      color: Colors.blue),
+                  style: TextStyle(fontSize: 17, fontWeight: FontWeight.normal, color: Colors.blue),
                 ),
                 const SizedBox(height: 20),
                 const Text(
@@ -50,12 +50,7 @@ class _MyGuardianState extends State<MyGuardian> {
                     ),
                   ),
                   child: TextFormField(
-                    decoration: const InputDecoration(
-                        border: InputBorder.none,
-                        hintText: '91+9876543210',
-                        hintStyle: TextStyle(fontSize: 20, color: Colors.grey),
-                        prefixIcon:
-                            Icon(Icons.phone_iphone_outlined, size: 25)),
+                    decoration: const InputDecoration(border: InputBorder.none, hintText: '91+9876543210', hintStyle: TextStyle(fontSize: 20, color: Colors.grey), prefixIcon: Icon(Icons.phone_iphone_outlined, size: 25)),
                   ),
                 ),
                 const SizedBox(height: 20),
@@ -72,40 +67,33 @@ class _MyGuardianState extends State<MyGuardian> {
                     ),
                   ),
                   child: TextFormField(
-                    decoration: const InputDecoration(
-                        border: InputBorder.none,
-                        hintStyle: TextStyle(fontSize: 20, color: Colors.grey),
-                        hintText: '91+9876543210',
-                        prefixIcon:
-                            Icon(Icons.phone_iphone_outlined, size: 25)),
+                    decoration: const InputDecoration(border: InputBorder.none, hintStyle: TextStyle(fontSize: 20, color: Colors.grey), hintText: '91+9876543210', prefixIcon: Icon(Icons.phone_iphone_outlined, size: 25)),
                   ),
                 ),
               ],
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.only(top: 410, left: 50),
-            child: Container(
+          InkWell(
+            child: Padding(
+              padding: const EdgeInsets.only(top: 410, left: 50),
+              child: Container(
                 width: 300,
                 height: 50,
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
-                    color: const Color(0xFF4E74F9)),
+                decoration: BoxDecoration(borderRadius: BorderRadius.circular(10), color: const Color(0xFF4E74F9)),
                 child: Row(
-                  children: [
+                  children: const [
                     Flexible(
                       child: Center(
-                        child: TextButton(
-                          onPressed: () {},
-                          child: const Text(
-                            'Give Access',
-                            style: TextStyle(color: Colors.white, fontSize: 18),
-                          ),
+                        child: Text(
+                          'Give Access',
+                          style: TextStyle(color: Colors.white, fontSize: 18),
                         ),
                       ),
                     ),
                   ],
-                )),
+                ),
+              ),
+            ),
           ),
         ],
       ),

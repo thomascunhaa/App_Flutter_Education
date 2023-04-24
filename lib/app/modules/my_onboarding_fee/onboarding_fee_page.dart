@@ -54,19 +54,12 @@ class _OnboardingFeeState extends State<OnboardingFee> {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.only(left: 40, top: 80, right: 95),
+            padding: const EdgeInsets.only(left: 40, top: 80),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Text('Fees',
-                    style:
-                        TextStyle(fontSize: 50, fontWeight: FontWeight.bold)),
-                Text(
-                    'Lorem ipsum dolor sit amet,\nconsectetur adipiscing elit, sed do\neiusmod tempor incididunt dolore\nmagna aliqua',
-                    style: TextStyle(
-                        fontSize: 18,
-                        fontWeight: FontWeight.normal,
-                        color: Colors.grey.shade600)),
+                const Text('Fees', style: TextStyle(fontSize: 50, fontWeight: FontWeight.bold)),
+                Text('Lorem ipsum dolor sit amet,\nconsectetur adipiscing elit, sed do\neiusmod tempor incididunt dolore\nmagna aliqua', style: TextStyle(fontSize: 18, fontWeight: FontWeight.normal, color: Colors.grey.shade600)),
               ],
             ),
           ),
@@ -79,29 +72,30 @@ class _OnboardingFeeState extends State<OnboardingFee> {
               fit: BoxFit.cover,
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.only(top: 750, left: 50),
-            child: Container(
-                width: 300,
-                height: 50,
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
-                    color: const Color(0xFF4E74F9)),
-                child: Row(
-                  children: [
-                    Flexible(
-                      child: Center(
-                        child: TextButton(
-                          onPressed: () => Modular.to.navigate('/my-guardian'),
-                          child: const Text(
-                            'Next',
-                            style: TextStyle(color: Colors.white, fontSize: 18),
+          InkWell(
+            onTap: () => Modular.to.navigate('/my-guardian'),
+            child: Align(
+              alignment: Alignment.bottomCenter,
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Container(
+                    width: 300,
+                    height: 50,
+                    decoration: BoxDecoration(borderRadius: BorderRadius.circular(10), color: const Color(0xFF4E74F9)),
+                    child: Row(
+                      children: const [
+                        Flexible(
+                          child: Center(
+                            child: Text(
+                              'Next',
+                              style: TextStyle(color: Colors.white, fontSize: 18),
+                            ),
                           ),
                         ),
-                      ),
-                    ),
-                  ],
-                )),
+                      ],
+                    )),
+              ),
+            ),
           ),
         ],
       ),
