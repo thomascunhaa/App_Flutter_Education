@@ -41,7 +41,7 @@ class _MyGuardianState extends State<MyGuardian> {
                 const SizedBox(height: 20),
                 const Text(
                   'Mobile',
-                  style: TextStyle(fontSize: 15),
+                  style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
                 ),
                 const SizedBox(height: 10),
                 Container(
@@ -52,13 +52,18 @@ class _MyGuardianState extends State<MyGuardian> {
                     ),
                   ),
                   child: TextFormField(
-                    decoration: const InputDecoration(border: InputBorder.none, hintText: '91+9876543210', hintStyle: TextStyle(fontSize: 20, color: Colors.grey), prefixIcon: Icon(Icons.phone_iphone_outlined, size: 25)),
+                    decoration: const InputDecoration(
+                      border: InputBorder.none,
+                      hintText: '91+9876543210',
+                      hintStyle: TextStyle(fontSize: 18, color: Colors.grey),
+                      prefixIcon: Icon(Icons.phone_iphone_outlined, size: 22),
+                    ),
                   ),
                 ),
                 const SizedBox(height: 20),
                 const Text(
                   'Confirm mobile',
-                  style: TextStyle(fontSize: 15),
+                  style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
                 ),
                 const SizedBox(height: 10),
                 Container(
@@ -69,7 +74,12 @@ class _MyGuardianState extends State<MyGuardian> {
                     ),
                   ),
                   child: TextFormField(
-                    decoration: const InputDecoration(border: InputBorder.none, hintStyle: TextStyle(fontSize: 20, color: Colors.grey), hintText: '91+9876543210', prefixIcon: Icon(Icons.phone_iphone_outlined, size: 25)),
+                    decoration: const InputDecoration(
+                      border: InputBorder.none,
+                      hintText: '91+9876543210',
+                      hintStyle: TextStyle(fontSize: 18, color: Colors.grey),
+                      prefixIcon: Icon(Icons.phone_iphone_outlined, size: 22),
+                    ),
                   ),
                 ),
               ],

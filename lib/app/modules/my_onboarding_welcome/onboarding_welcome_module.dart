@@ -1,3 +1,4 @@
+import 'package:app_education/app/modules/my_home_page/home_page.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
 import '../my_guardian/my_guardian_page.dart';
@@ -16,5 +17,6 @@ class OnboardingWelcomeModule extends Module {
     ChildRoute('/', child: (_, args) => const OnboardingWelcome()),
     ChildRoute('/onboarding-fee', child: (_, args) => const OnboardingFee()),
     ChildRoute('/my-guardian', child: (_, args) => const MyGuardian()),
+    ChildRoute('/my-home-page', child: (_, args) => const HomePage()),
   ];
 }

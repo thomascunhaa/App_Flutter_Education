@@ -54,7 +54,7 @@ class _OnboardingFeeState extends State<OnboardingFee> {
             ),
           ),
           InkWell(
-            onTap: () => Modular.to.navigate('/my-guardian'),
+            onTap: () => Modular.to.navigate('/my-home-page'),
             highlightColor: Colors.transparent,
             splashColor: Colors.transparent,
             child: Padding(
@@ -91,7 +91,8 @@ class _OnboardingFeeState extends State<OnboardingFee> {
             ),
           ),
           InkWell(
-            onTap: () => Modular.to.navigate('/my-guardian'),
+            // onTap: () => Modular.to.navigate('/my-guardian'),
+            onTap: () => Modular.to.navigate('/my-home-page'),
             highlightColor: Colors.transparent,
             splashColor: Colors.transparent,
             child: Align(
