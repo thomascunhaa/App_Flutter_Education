@@ -90,15 +90,12 @@ class _OnboardingFeeState extends State<OnboardingFee> {
               fit: BoxFit.cover,
             ),
           ),
-          InkWell(
-            // onTap: () => Modular.to.navigate('/my-guardian'),
-            onTap: () => Modular.to.navigate('/my-home-page'),
-            highlightColor: Colors.transparent,
-            splashColor: Colors.transparent,
-            child: Align(
-              alignment: Alignment.bottomCenter,
-              child: Padding(
-                padding: const EdgeInsets.only(bottom: 30),
+          Align(
+            alignment: Alignment.bottomCenter,
+            child: Padding(
+              padding: const EdgeInsets.only(bottom: 30),
+              child: InkWell(
+                onTap: () => Modular.to.navigate('/my-guardian'),
                 child: Container(
                     width: 300,
                     height: 50,
