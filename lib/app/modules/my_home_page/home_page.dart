@@ -13,19 +13,14 @@ class _HomePageState extends State<HomePage> with HomePageMixin {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
+      body: Stack(
         children: [
-          customAppBar(),
-          Padding(
-            padding: const EdgeInsets.only(left: 30, right: 30, top: 30),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                const Text('Explore categories', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30)),
-                const Text('See all', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15, color: Colors.blue)),
-                const SizedBox(height: 30),
-              ],
-            ),
+          Column(
+            children: [
+              customAppBar(),
+              textHomePage(),
+              gridViewCustom(),
+            ],
           ),
         ],
       ),

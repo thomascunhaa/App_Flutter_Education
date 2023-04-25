@@ -84,4 +84,140 @@ mixin HomePageMixin {
       ),
     );
   }
+
+  Widget gridViewCustom() {
+    return Expanded(
+      child: Padding(
+        padding: const EdgeInsets.only(),
+        child: GridView.count(
+          crossAxisCount: 2,
+          shrinkWrap: false,
+          physics: const BouncingScrollPhysics(), // permitir rolagem
+          children: [
+            Card(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Image.asset('assets/9.jpg'),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 20),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: const [
+                        Text('Accounting ', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
+                        Text('20 Courses ', style: TextStyle(fontWeight: FontWeight.normal, fontSize: 15, color: Colors.grey)),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Card(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Image.asset('assets/9.jpg'),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 20),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: const [
+                        Text('Accounting ', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
+                        Text('20 Courses ', style: TextStyle(fontWeight: FontWeight.normal, fontSize: 15, color: Colors.grey)),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Card(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Image.asset('assets/9.jpg'),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 20),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: const [
+                        Text('Accounting ', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
+                        Text('20 Courses ', style: TextStyle(fontWeight: FontWeight.normal, fontSize: 15, color: Colors.grey)),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Card(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Image.asset('assets/9.jpg'),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 20),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: const [
+                        Text('Accounting ', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
+                        Text('20 Courses ', style: TextStyle(fontWeight: FontWeight.normal, fontSize: 15, color: Colors.grey)),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Card(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Image.asset('assets/9.jpg'),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 20),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: const [
+                        Text('Accounting ', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
+                        Text('20 Courses ', style: TextStyle(fontWeight: FontWeight.normal, fontSize: 15, color: Colors.grey)),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Card(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Image.asset('assets/9.jpg'),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 20),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: const [
+                        Text('Accounting ', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
+                        Text('20 Courses ', style: TextStyle(fontWeight: FontWeight.normal, fontSize: 15, color: Colors.grey)),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget textHomePage() {
+    return Padding(
+      padding: const EdgeInsets.only(left: 30, right: 30, top: 30),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: const [
+          Text('Explore categories', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30)),
+          Text('See all', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15, color: Colors.blue)),
+        ],
+      ),
+    );
+  }
 }
