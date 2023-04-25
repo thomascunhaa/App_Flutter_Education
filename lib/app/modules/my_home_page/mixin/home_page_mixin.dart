@@ -30,7 +30,7 @@ mixin HomePageMixin {
                 style: TextStyle(fontWeight: FontWeight.normal, color: Colors.white, fontSize: 20),
               ),
               const SizedBox(
-                height: 30,
+                height: 25,
               ),
               Container(
                 decoration: BoxDecoration(
@@ -88,13 +88,19 @@ mixin HomePageMixin {
   Widget gridViewCustom() {
     return Expanded(
       child: Padding(
-        padding: const EdgeInsets.only(),
+        padding: const EdgeInsets.only(right: 20, left: 20),
         child: GridView.count(
           crossAxisCount: 2,
           shrinkWrap: false,
           physics: const BouncingScrollPhysics(), // permitir rolagem
           children: [
             Card(
+              elevation: 2,
+              shape: const RoundedRectangleBorder(
+                borderRadius: BorderRadius.all(
+                  Radius.circular(10),
+                ),
+              ),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -113,16 +119,22 @@ mixin HomePageMixin {
               ),
             ),
             Card(
+              elevation: 2,
+              shape: const RoundedRectangleBorder(
+                borderRadius: BorderRadius.only(
+                  bottomRight: Radius.circular(10),
+                ),
+              ),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Image.asset('assets/9.jpg'),
+                  Image.asset('assets/10.jpg'),
                   Padding(
                     padding: const EdgeInsets.only(left: 20),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: const [
-                        Text('Accounting ', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
+                        Text('Bioloogy ', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
                         Text('20 Courses ', style: TextStyle(fontWeight: FontWeight.normal, fontSize: 15, color: Colors.grey)),
                       ],
                     ),
@@ -131,17 +143,23 @@ mixin HomePageMixin {
               ),
             ),
             Card(
+              elevation: 2,
+              shape: const RoundedRectangleBorder(
+                borderRadius: BorderRadius.only(
+                  bottomRight: Radius.circular(10),
+                ),
+              ),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Image.asset('assets/9.jpg'),
+                  Image.asset('assets/11.jpg'),
                   Padding(
                     padding: const EdgeInsets.only(left: 20),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: const [
-                        Text('Accounting ', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
-                        Text('20 Courses ', style: TextStyle(fontWeight: FontWeight.normal, fontSize: 15, color: Colors.grey)),
+                        Text('Photography ', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
+                        Text('25 Courses ', style: TextStyle(fontWeight: FontWeight.normal, fontSize: 15, color: Colors.grey)),
                       ],
                     ),
                   ),
@@ -149,17 +167,23 @@ mixin HomePageMixin {
               ),
             ),
             Card(
+              elevation: 2,
+              shape: const RoundedRectangleBorder(
+                borderRadius: BorderRadius.only(
+                  bottomRight: Radius.circular(10),
+                ),
+              ),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Image.asset('assets/9.jpg'),
+                  Image.asset('assets/13.jpg'),
                   Padding(
                     padding: const EdgeInsets.only(left: 20),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: const [
-                        Text('Accounting ', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
-                        Text('20 Courses ', style: TextStyle(fontWeight: FontWeight.normal, fontSize: 15, color: Colors.grey)),
+                        Text('Marketing ', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
+                        Text('18 Courses ', style: TextStyle(fontWeight: FontWeight.normal, fontSize: 15, color: Colors.grey)),
                       ],
                     ),
                   ),
@@ -167,16 +191,22 @@ mixin HomePageMixin {
               ),
             ),
             Card(
+              elevation: 2,
+              shape: const RoundedRectangleBorder(
+                borderRadius: BorderRadius.only(
+                  bottomRight: Radius.circular(10),
+                ),
+              ),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Image.asset('assets/9.jpg'),
+                  Image.asset('assets/14.jpg'),
                   Padding(
                     padding: const EdgeInsets.only(left: 20),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: const [
-                        Text('Accounting ', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
+                        Text('Finance ', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
                         Text('20 Courses ', style: TextStyle(fontWeight: FontWeight.normal, fontSize: 15, color: Colors.grey)),
                       ],
                     ),
@@ -184,22 +214,31 @@ mixin HomePageMixin {
                 ],
               ),
             ),
-            Card(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Image.asset('assets/9.jpg'),
-                  Padding(
-                    padding: const EdgeInsets.only(left: 20),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: const [
-                        Text('Accounting ', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
-                        Text('20 Courses ', style: TextStyle(fontWeight: FontWeight.normal, fontSize: 15, color: Colors.grey)),
-                      ],
-                    ),
+            InkWell(
+              onTap: () => {},
+              child: Card(
+                elevation: 2,
+                shape: const RoundedRectangleBorder(
+                  borderRadius: BorderRadius.only(
+                    bottomRight: Radius.circular(10),
                   ),
-                ],
+                ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Image.asset('assets/15.jpg'),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 20),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: const [
+                          Text('Science  ', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
+                          Text('20 Courses ', style: TextStyle(fontWeight: FontWeight.normal, fontSize: 15, color: Colors.grey)),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ),
           ],
